@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Rated Movies | Tres Marias</title>
+    <meta name="description" content="Browse the highest-rated movies on Tres Marias, ranked by rating.">
+
+    <link rel="stylesheet" href="Styles_1.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Tres Marias</div>
+
+        <nav>
+            <a href="MR_1.html">Home</a>
+            <a href="genres.html">Genres</a>
+            <a href="top-rated.html" class="active-link">Top Rated</a>
+        </nav>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Top Rated intro -->
+    <section class="genres-hero">
+        <h1>Top Rated Movies</h1>
+        <p>The highest-scoring titles on Tres Marias, ranked from best to worst.</p>
+    </section>
+
+    <!-- Movies -->
+    <section class="movies">
+        <div class="movie-container">
+
+            <div class="card" data-movie="obsession">
+                <img src="posters/obsession-poster.jpg" alt="Obsession poster">
+                <h3>Obsession</h3>
+                <p>Horror &middot; 94% (RT)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="backrooms">
+                <img src="posters/backrooms-poster.jpg" alt="Backrooms poster">
+                <h3>Backrooms</h3>
+                <p>Sci-Fi/Horror &middot; 87% (RT)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="odyssey">
+                <img src="posters/odyssey-poster.jpg" alt="The Odyssey poster">
+                <h3>The Odyssey</h3>
+                <p>Adventure/Action &middot; 7.0 (IMDb)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="hailmary">
+                <img src="posters/hailmary-poster.jpg" alt="Project Hail Mary poster">
+                <h3>Project Hail Mary</h3>
+                <p>Sci-Fi &middot; 6.1 (IMDb)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="shawshank-redemption">
+                <img src="posters/shawshank-redemption-poster.jpg" alt="The Shawshank Redemption poster">
+                <h3>The Shawshank Redemption</h3>
+                <p>Drama &middot; 9.3 (IMDb)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="the-godfather">
+                <img src="posters/the-godfather-poster.jpg" alt="The Godfather poster">
+                <h3>The Godfather</h3>
+                <p>Crime &middot; 9.2 (IMDb)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="pulp-fiction">
+                <img src="posters/pulp-fiction-poster.jpg" alt="Pulp Fiction poster">
+                <h3>Pulp Fiction</h3>
+                <p>Crime &middot; 8.9 (IMDb)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="spirited-away">
+                <img src="posters/spirited-away-poster.jpg" alt="Spirited Away poster">
+                <h3>Spirited Away</h3>
+                <p>Animation &middot; 8.6 (IMDb)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="parasite">
+                <img src="posters/parasite-poster.jpg" alt="Parasite poster">
+                <h3>Parasite</h3>
+                <p>Thriller &middot; 8.5 (IMDb)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="whiplash">
+                <img src="posters/whiplash-poster.jpg" alt="Whiplash poster">
+                <h3>Whiplash</h3>
+                <p>Drama &middot; 8.5 (IMDb)</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Tres Marias | Movie Recommendation Website</p>
+    </footer>
+
+    <!-- Movie Details Modal -->
+    <div class="modal-overlay" id="movieModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+
+            <div class="modal-trailer">
+                <iframe id="modalTrailer" src="" title="Trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+
+                <div class="modal-meta">
+                    <span class="modal-rating"><i class="fas fa-star"></i> <span id="modalRating"></span></span>
+                    <span id="modalGenre"></span>
+                    <span id="modalYear"></span>
+                </div>
+
+                <p id="modalSynopsis"></p>
+            </div>
+        </div>
+    </div>
+
+<script src="JavaScript_1.js"></script>
+
+</body>
+</html>

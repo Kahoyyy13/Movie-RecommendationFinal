@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieVerse | Discover Movies</title>
+    <meta name="description" content="Discover trending movies, browse by genre, and find your next favorite film on Tres Marias, a simple movie recommendation website.">
+
+    <link rel="stylesheet" href="Styles_1.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Tres Marias</div>
+
+        <nav>
+            <a href="MR_1.html" class="active-link">Home</a>
+            <a href="genres.html">Genres</a>
+            <a href="top-rated.html">Top Rated</a>
+        </nav>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-bg-slider">
+            <!-- Backrooms -->
+            <div class="hero-bg active" style="background-image:url('images/backrooms-bg.jpg')"></div>
+            <!-- Obsession -->
+            <div class="hero-bg" style="background-image:url('images/obsession-bg.jpg')"></div>
+            <!-- Project Hail Mary -->
+            <div class="hero-bg" style="background-image:url('images/hailmary-bg.jpg')"></div>
+            <!-- Supergirl -->
+            <div class="hero-bg" style="background-image:url('images/supergirl-bg.jpg')"></div>
+            <!-- The Odyssey -->
+            <div class="hero-bg" style="background-image:url('images/odyssey-bg.jpg')"></div>
+            <!-- Minions & Monsters -->
+            <div class="hero-bg" style="background-image:url('images/minions-bg.jpg')"></div>
+            <!-- Interstellar -->
+            <div class="hero-bg" style="background-image:url('images/interstellar-bg.jpg')"></div>
+        </div>
+        <div class="hero-fade"></div>
+
+        <div class="overlay">
+
+            <h1>Discover Your Next Favorite Movie</h1>
+
+            <p>
+                Search thousands of movies based on genre,
+                ratings, popularity, and recommendations.
+            </p>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search movies...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Trending -->
+    <section class="movies">
+
+        <h2>Trending Movies</h2>
+
+        <div class="movie-container">
+
+            <div class="card" data-movie="backrooms">
+                <img src="posters/backrooms-poster.jpg" alt="Backrooms poster">
+                <h3>Backrooms</h3>
+                <p>Horror</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="obsession">
+                <img src="posters/obsession-poster.jpg" alt="Obsession poster">
+                <h3>Obsession</h3>
+                <p>Horror</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="hailmary">
+                <img src="posters/hailmary-poster.jpg" alt="Project Hail Mary poster">
+                <h3>Project Hail Mary</h3>
+                <p>Sci-Fi</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="supergirl">
+                <img src="posters/supergirl-poster.jpg" alt="Supergirl poster">
+                <h3>Supergirl</h3>
+                <p>Action</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="odyssey">
+                <img src="posters/odyssey-poster.jpg" alt="The Odyssey poster">
+                <h3>The Odyssey</h3>
+                <p>Adventure</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+            <div class="card" data-movie="minions">
+                <img src="posters/minions-poster.jpg" alt="Minions &amp; Monsters poster">
+                <h3>Minions &amp; Monsters</h3>
+                <p>Animation</p>
+                <button class="details-btn">View Details</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© <span id="year"></span> Tres Marias | Movie Recommendation Website</p>
+    </footer>
+
+    <!-- Movie Details Modal -->
+    <div class="modal-overlay" id="movieModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+
+            <div class="modal-trailer">
+                <iframe id="modalTrailer" src="" title="Trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+
+                <div class="modal-meta">
+                    <span class="modal-rating"><i class="fas fa-star"></i> <span id="modalRating"></span></span>
+                    <span id="modalGenre"></span>
+                    <span id="modalYear"></span>
+                </div>
+
+                <p id="modalSynopsis"></p>
+            </div>
+        </div>
+    </div>
+
+<script src="JavaScript_1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results | Tres Marias</title>
+    <meta name="description" content="Search results across the Tres Marias movie catalog.">
+
+    <link rel="stylesheet" href="Styles_1.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Tres Marias</div>
+
+        <nav>
+            <a href="MR_1.html">Home</a>
+            <a href="genres.html">Genres</a>
+            <a href="top-rated.html">Top Rated</a>
+        </nav>
+
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Search intro -->
+    <section class="genres-hero">
+        <a href="MR_1.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1 id="searchQueryLabel">Search</h1>
+        <p>Matching titles and genres from across the Tres Marias catalog.</p>
+    </section>
+
+    <!-- Results -->
+    <section class="movies">
+        <div class="movie-container" id="searchResultsContainer"></div>
+        <div class="empty-genre" id="noResultsMsg" style="display:none;">
+            <i class="fas fa-magnifying-glass"></i>
+            <p>No movies matched that search &mdash; try a different title or genre.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Tres Marias | Movie Recommendation Website</p>
+    </footer>
+
+    <!-- Movie Details Modal -->
+    <div class="modal-overlay" id="movieModal">
+        <div class="modal">
+            <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+
+            <div class="modal-trailer">
+                <iframe id="modalTrailer" src="" title="Trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+
+                <div class="modal-meta">
+                    <span class="modal-rating"><i class="fas fa-star"></i> <span id="modalRating"></span></span>
+                    <span id="modalGenre"></span>
+                    <span id="modalYear"></span>
+                </div>
+
+                <p id="modalSynopsis"></p>
+            </div>
+        </div>
+    </div>
+
+<script src="JavaScript_1.js"></script>
+
+</body>
+</html>
